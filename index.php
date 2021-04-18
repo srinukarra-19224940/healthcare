@@ -35,7 +35,7 @@
                     $test = $_POST['test'];
                     $appdate = $_POST['appdate1'];
                     $apptime = date('H:i:s', strtotime($_POST['apptime1']));
-                    $qry = mysqli_query($con, "INSERT INTO test_appointment (Test_id,Test_time,Test_date,Users_id,Report) VALUES ('$test','$apptime','$appdate','$id','')");
+                    $qry = mysqli_query($con, "INSERT INTO test_appointment (Test_id,Test_time,Test_date,Users_id,Report) VALUES ($id,'$apptime','$appdate','$id','')");
                     if ($qry) {
                         echo '
                         <script>
@@ -56,7 +56,7 @@
                     $doc = $_POST['docname'];
                     $appdate = $_POST['appdate'];
                     $apptime = date('H:i:s', strtotime($_POST['apptime']));
-                    $qry = mysqli_query($con, "INSERT INTO doctor_app (Doctor_id,App_date,App_time,Users_id,Report,Status) VALUES (5,'$appdate','$apptime','$id','','Accepted')");
+                    $qry = mysqli_query($con, "INSERT INTO doctor_app (Doctor_id,App_date,App_time,Users_id,Report,Status) VALUES (1,'$appdate','$apptime','$id','','Accepted')");
                     if ($qry) {
                         echo '
                         <script>
